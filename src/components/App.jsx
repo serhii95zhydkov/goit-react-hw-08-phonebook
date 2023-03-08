@@ -1,30 +1,20 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/contacts/contacts-operations';
-import { getIsLoading } from 'redux/contacts/contacts-selectors';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
-import Loader from './Loader/Loader';
+import Navbar from './Navbar/Navbar';
+import UserRoutes from 'UserRoutes';
 
-const App = () => {
-  const isLoading = useSelector(getIsLoading);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+import { store } from 'redux/store';
 
+function App() {
   return (
-    <>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      {isLoading && <Loader />}
-      <ContactList />
-    </>
+    <Provider store={store}>
+      <BrowserRouter basename="/goit-react-hw-08-phonebook">
+        <Navbar />
+        <UserRoutes />
+      </BrowserRouter>
+    </Provider>
   );
-};
+}
 
 export default App;

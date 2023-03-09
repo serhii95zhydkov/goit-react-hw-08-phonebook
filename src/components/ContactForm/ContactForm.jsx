@@ -12,7 +12,7 @@ import {
 
 const ContactForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -20,8 +20,8 @@ const ContactForm = () => {
       case 'name':
         setName(value);
         break;
-      case 'phone':
-        setPhone(value);
+      case 'number':
+        setNumber(value);
         break;
 
       default:
@@ -37,13 +37,13 @@ const ContactForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     reset();
   };
 
   const reset = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -64,8 +64,8 @@ const ContactForm = () => {
         Number
         <StyledInputForm
           type="tel"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
           onChange={handleChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

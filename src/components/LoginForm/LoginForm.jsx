@@ -6,6 +6,8 @@ import useForm from 'hooks/useForm';
 import fields from './fields';
 import initialState from './initialState';
 
+import { StyledLoginForm } from './LoginForm.styled';
+
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     initialState,
@@ -14,7 +16,7 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <StyledLoginForm onSubmit={handleSubmit}>
       <TextField value={email} handleChange={handleChange} {...fields.email} />
       <TextField
         value={password}
@@ -22,7 +24,7 @@ const LoginForm = ({ onSubmit }) => {
         {...fields.password}
       />
       <Button>Login</Button>
-    </form>
+    </StyledLoginForm>
   );
 };
 

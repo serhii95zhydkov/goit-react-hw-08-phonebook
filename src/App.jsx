@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from 'redux/store';
 
 import AuthLayout from './components/AuthLayot/AuthLayout';
-import Navbar from './components/Navbar/Navbar';
+import Layout from 'components/Layout/Layout';
 import UserRoutes from 'UserRoutes';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <AuthLayout>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="/goit-react-hw-08-phonebook">
-            <Navbar />
+            <Layout />
             <UserRoutes />
           </BrowserRouter>
         </PersistGate>

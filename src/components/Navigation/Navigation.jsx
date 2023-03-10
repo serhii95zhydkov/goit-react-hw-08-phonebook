@@ -4,15 +4,15 @@ import NavbarAuth from './NavbarAuth/NavbarAuth';
 import NavbarUser from './NavbarUser/NavbarUser';
 import { isUserLogin } from 'redux/auth/auth-selectors';
 
-import { StyledNavbar } from './Navbar.styled';
+import { StyledNavigation } from './Navigation.styled';
 
-const Navbar = () => {
+const Navigation = () => {
   const isLogin = useSelector(isUserLogin);
   return (
-    <StyledNavbar>
+    <StyledNavigation>
       {!isLogin && <NavbarAuth />}
       {isLogin && <NavbarUser />}
-    </StyledNavbar>
+    </StyledNavigation>
   );
 };
-export default Navbar;
+export default Navigation;

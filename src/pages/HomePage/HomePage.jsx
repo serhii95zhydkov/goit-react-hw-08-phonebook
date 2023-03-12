@@ -1,8 +1,10 @@
+import { StyledContainer, StyledTitle } from './HomePage.styled';
+
 const HomePage = () => {
   return (
-    <>
-      <h1>Welcome HomePage</h1>
-    </>
+    <StyledContainer>
+      <StyledTitle>Welcome to your PhoneBook!</StyledTitle>
+    </StyledContainer>
   );
 };
 

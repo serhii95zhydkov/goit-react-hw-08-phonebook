@@ -1,5 +1,4 @@
 import TextField from 'components/TextField/TextField';
-import Button from 'components/Button/Button';
 
 import useForm from 'hooks/useForm';
 
@@ -7,6 +6,7 @@ import fields from './fields';
 import initialState from './initialState';
 
 import { StyledLoginForm } from './LoginForm.styled';
+import { Button } from '@mui/material';
 
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -23,7 +23,9 @@ const LoginForm = ({ onSubmit }) => {
         handleChange={handleChange}
         {...fields.password}
       />
-      <Button>Login</Button>
+      <Button type="submit" variant="contained" size="small">
+        Login
+      </Button>
     </StyledLoginForm>
   );
 };

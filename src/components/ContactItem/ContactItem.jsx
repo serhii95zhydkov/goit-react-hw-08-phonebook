@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/contacts-operations';
 
-import {
-  StyledItemContacts,
-  StyledTextContacts,
-  StyledButtonContacts,
-} from './ContactItem.styled';
+import { StyledItemContacts, StyledTextContacts } from './ContactItem.styled';
+
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ContactItem = ({ contact: { id, name, number } }) => {
   const dispatch = useDispatch();
@@ -16,12 +15,14 @@ const ContactItem = ({ contact: { id, name, number } }) => {
       <StyledTextContacts>
         {name}: {number}
       </StyledTextContacts>
-      <StyledButtonContacts
+      <Button
         onClick={() => dispatch(deleteContact(id))}
-        type="button"
+        variant="contained"
+        size="small"
+        startIcon={<DeleteIcon />}
       >
         Delete
-      </StyledButtonContacts>
+      </Button>
     </StyledItemContacts>
   );
 };

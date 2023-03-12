@@ -10,9 +10,9 @@ const persistConfig = {
   key: 'root',
   storage,
   whitelist: ['token'],
-}
+};
 
-const persistedAuthReducer = persistReducer(persistConfig, authReducer)
+const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 
 const rootReducer = combineReducers({
   auth: persistedAuthReducer,

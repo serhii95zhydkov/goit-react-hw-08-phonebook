@@ -3,7 +3,7 @@ import { Radio } from 'react-loader-spinner';
 export const Loader = () => {
   return (
     <>
-      <Radio />
+      <Radio colors={['#1976d2', '#1976d2', '#1976d2']} />
     </>
   );
 };

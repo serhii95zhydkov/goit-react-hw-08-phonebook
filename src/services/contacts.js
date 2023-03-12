@@ -1,4 +1,4 @@
-import instance from "./auth";
+import instance from './auth';
 
 export const getAllContacts = async () => {
   const { data } = await instance.get('/contacts');

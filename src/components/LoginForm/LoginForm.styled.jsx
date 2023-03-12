@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const StyledLoginForm = styled.form`
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   padding: 20px;
 `;
 

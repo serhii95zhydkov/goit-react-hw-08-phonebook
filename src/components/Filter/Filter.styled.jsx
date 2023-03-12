@@ -9,7 +9,7 @@ const StyledLabelFilter = styled.label`
 `;
 
 const StyledInputFilter = styled.input`
-  width: 320px;
+  width: 333px;
   padding: 4px 12px;
   height: 20px;
   border-radius: 5px;

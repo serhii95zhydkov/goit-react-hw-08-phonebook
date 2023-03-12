@@ -2,12 +2,14 @@ import { Outlet } from 'react-router-dom';
 
 import Navigation from 'components/Navigation/Navigation';
 
+import { StyledHeader } from './Layout.styled';
+
 const Layout = () => {
   return (
     <div>
-      <header>
+      <StyledHeader>
         <Navigation />
-      </header>
+      </StyledHeader>
       <main>
         <Outlet />
       </main>

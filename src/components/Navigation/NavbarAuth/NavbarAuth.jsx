@@ -1,11 +1,14 @@
-import { StyledNavbarAuthLink } from './NavbarAuth.styled';
+import {
+  StyledNavbarAuthLink,
+  StyledNavbarAuthContainer,
+} from './NavbarAuth.styled';
 
 const NavbarAuth = () => {
   return (
-    <div>
-      <StyledNavbarAuthLink to="/register">Register</StyledNavbarAuthLink> |
+    <StyledNavbarAuthContainer>
+      <StyledNavbarAuthLink to="/register">Register</StyledNavbarAuthLink>
       <StyledNavbarAuthLink to="/login">Login</StyledNavbarAuthLink>
-    </div>
+    </StyledNavbarAuthContainer>
   );
 };
 

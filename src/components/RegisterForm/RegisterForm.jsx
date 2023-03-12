@@ -2,8 +2,9 @@ import useForm from 'hooks/useForm';
 import initialState from './initialState';
 import TextField from 'components/TextField/TextField';
 import fields from './fields';
-import Button from 'components/Button/Button';
+
 import { StyledRegisterForm } from './RegisterForm.styled';
+import { Button } from '@mui/material';
 
 const RegisterForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
@@ -22,7 +23,9 @@ const RegisterForm = ({ onSubmit }) => {
         handleChange={handleChange}
         {...fields.password}
       />
-      <Button>Register</Button>
+      <Button type="submit" variant="contained" size="small">
+        Sign up
+      </Button>
     </StyledRegisterForm>
   );
 };

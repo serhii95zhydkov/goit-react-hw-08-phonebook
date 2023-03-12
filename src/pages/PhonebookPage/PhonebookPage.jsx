@@ -8,6 +8,12 @@ import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 import Loader from 'components/Loader/Loader';
 
+import {
+  StyledContainer,
+  StyledTitle,
+  StyledTitleContacts,
+} from './PhonebookPage.styled';
+
 const PhonebookPage = () => {
   const isLoading = useSelector(getIsLoading);
   const dispatch = useDispatch();
@@ -16,14 +22,14 @@ const PhonebookPage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>Phonebook</h1>
+    <StyledContainer>
+      <StyledTitle>PhoneBook</StyledTitle>
       <ContactForm />
-      <h2>Contacts</h2>
+      <StyledTitleContacts>Contacts</StyledTitleContacts>
       <Filter />
       {isLoading && <Loader />}
       <ContactList />
-    </>
+    </StyledContainer>
   );
 };
 

@@ -3,19 +3,20 @@ import { useDispatch } from 'react-redux';
 import { signup } from 'redux/auth/auth-operations';
 
 import RegisterForm from 'components/RegisterForm/RegisterForm';
+import { StyledContainer, StyledTitle } from './RegisterPage.styled';
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
-  
+
   const handleSignup = data => {
     dispatch(signup(data));
   };
 
   return (
-    <div>
-      <h1>Register page</h1>
+    <StyledContainer>
+      <StyledTitle>REGISTER</StyledTitle>
       <RegisterForm onSubmit={handleSignup} />
-    </div>
+    </StyledContainer>
   );
 };
 

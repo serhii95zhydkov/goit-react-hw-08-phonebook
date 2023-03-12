@@ -8,10 +8,13 @@ const StyledTextFieldWrapper = styled.div`
   margin-bottom: 15px;
 `;
 
+const StyledTextFieldLabel = styled.label`
+  font-weight: 700;
+`;
 const StyledTextFieldInput = styled.input`
   padding: 10px;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 4px;
 `;
 
-export { StyledTextFieldWrapper, StyledTextFieldInput };
+export { StyledTextFieldWrapper, StyledTextFieldLabel, StyledTextFieldInput };
